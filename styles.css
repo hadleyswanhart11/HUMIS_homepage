@@ -3,22 +3,28 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 
     div.container {
-        width: 780px;
-        border: 5px solid red;
+        min-width: 390px;
+        max-width: 780px;
         margin: 0 auto;
         background-color: white;
 
+        header {
+            img {
+                display: block;
+                width: 100%;
+            }
+        }
+
         section.middle {
             padding: 10px;
-            background-image : url('files/uofu_medallion_rt.gif');
+            background-image: url('files/uofu_medallion_rt.gif');
             background-repeat: no-repeat;
             background-position: bottom right;
 
-             nav {
-                text-align: right;
+            nav {
+                text-align: center;
                 font-size: 10px;
                 text-transform: uppercase;
-
 
                 a {
                     color: #000;
@@ -40,94 +46,102 @@ body {
                     }
                 }
 
-                &.bottom {
-                text-transform: lowercase;
+                &.drop-down-menu {
+                    margin-top: 10px;
 
+                    select {
+                        width: 100%;
+                    }
+                }
+
+                &.bottom {
+                    text-transform: lowercase;
                 }
             }
         }
 
         div.green-box {
-            min-height: 450px;
+            min-height: 600px;
             background-color: #C8CAAF;
-            padding: 20px 30px;
+            padding: 10px;
             margin: 10px 0px 100px;
             border-radius: 10px;
 
-            aside {
-
-                &.left {
-                    float: left;
-                    width: 30%;
-
-                    nav {
-                        padding: 0 20px;
-                        a {
-                            display: block;
-                            color: #000;
-                            border-bottom: 2px solid #505A2F;
-                            border-right: none;
-                            text-decoration: none;
-                            text-align: left;
-                            text-transform: uppercase;
-                            font-size: 10px;
-                            padding: 10px 0 10px 15px;
-
-                            &:hover {
-                                color: white;
-                                background-color: #505A2F;
-                            }
-                        }
-
-                        div.links {
-                            margin-top: 150px;
-                            &.links {
-                                border-bottom: none;
-                            }
-                        }
+            aside.left-side {
+                nav {
+                    a {
+                        border-right: none;
                     }
                 }
-                &.right {
-                    float: right;
-                    width: 60%;
-                    background-color: white;
-                    padding: 10px;
+
+                .login {
+                    padding: 200px 0 0 0;
 
                     img {
-                        width: 100%;
-                    }
-
-                    h1 {
-                        text-transform: uppercase;
-                        color: #505A2F;
-                        border-bottom: 2px dashed #A12D37;
-                        font-size: 16px;
-                        font-weight: normal;
-                        padding-bottom: 10px;
-                    }
-
-
-                    p {
-                        font-size: 12px;
-                    }
-
-                    a {
-                        text-transform: uppercase;
-                        color: #A12D37;
-                        font-size: 12px;
+                        display: block;
+                        width: 90%;
+                        height: 90%;
 
                         &:hover {
-                            text-decoration: underline;
+                            background-color: #fff;
                         }
-                    }
-
-                    .link {
-                        text-align: right;
+                        a.active {
+                            background-color: #505A2F;
+                            color: white;
+                        }
                     }
                 }
             }
-        }
 
+
+            main {
+                background-color: white;
+                padding: 10px;
+
+                img {
+                    width: 100%;
+                }
+
+                .news {
+                    padding: 20px 5px;
+
+                    h2 {
+                        color: #505A2F;
+                        font-size: 25px;
+                        font-weight: normal;
+                        margin: 0 0 15px 0;
+                        padding-bottom: 7px;
+                        border-bottom: 2px dashed #c43733;
+                    }
+
+                    .news-content {
+                        p {
+                            color: #303039;
+                            font-size: 11px;
+                            margin: 0;
+                        }
+
+                        strong {
+                            font-weight: bold;
+                        }
+
+                        a {
+                            display: block;
+                            color: #c43733;
+                            font-size: 12px;
+                            text-decoration: none;
+                            text-align: right;
+                            margin-top: 18px;
+
+                            &:hover {
+                                text-decoration: underline;
+                            }
+                        }
+                    }
+                }
+            }
+
+        }
 
         footer {
             background-color: #676E3D;
@@ -135,6 +149,55 @@ body {
             color: white;
             font-size: 10px;
             padding: 10px 0;
+        }
+
+        @media screen and (width > 600px) {
+
+            section.middle {
+                > nav {
+                    text-align: right;
+
+                    &.drop-down-menu {
+                        display: none;
+                    }
+                }
+
+                div.green-box {
+                    padding: 20px 30px;
+
+                    aside {
+                        &.left-side {
+                            display: block;
+                            float: left;
+                            width: 30%;
+                            border-right: none;
+
+                            nav {
+                                a {
+                                    display: block;
+                                    text-transform: uppercase;
+                                    font-size: 11px;
+                                    color: #505A2F;
+                                    border-right: none;
+                                    border-bottom: 2px solid #505A2F;
+                                    text-decoration: none;
+                                    padding: 10px 0 10px 0;
+
+                                    &:hover {
+                                        background-color: #505A2F;
+                                        color: white;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    main {
+                        float: right;
+                        width: 60%;
+                    }
+                }
+            }
         }
     }
 }

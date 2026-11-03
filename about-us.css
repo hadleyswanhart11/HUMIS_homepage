@@ -1,0 +1,170 @@
+
+body {
+    background-color: #292827;
+    font-family: Arial, Helvetica, sans-serif;
+
+    div.container {
+        min-width: 390px;
+        max-width: 780px;
+        margin: 0 auto;
+        background-color: white;
+
+        header {
+            img {
+                display: block;
+                width: 100%;
+            }
+        }
+
+        section.middle {
+            padding: 5px;
+
+            > nav {
+                text-align: center;
+                font-size: 10px;
+                text-transform: uppercase;
+            }
+
+            nav {
+                a {
+                    color: #000;
+                    border-right: 0.5px solid black;
+                    padding-right: 5px;
+                    margin-right: 5px;
+                    text-decoration: none;
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
+
+                    &:last-of-type {
+                        border-right: none;
+                    }
+                }
+
+                img {
+                    vertical-align: middle;
+                }
+
+                &.bottom {
+                    text-align: right;
+                    text-transform: lowercase;
+                    font-size: 10px;
+                }
+            }
+
+            .drop-down-menu {
+                margin-top: 10px;
+
+                select {
+                    width: 100%;
+                }
+            }
+        }
+
+        div.white-box {
+            min-height: 450px;
+            padding: 10px;
+            margin: 10px 0px 100px;
+            border-radius: 10px;
+
+            main {
+                background-color: white;
+                padding: 10px;
+
+                img.about-image {
+                    float: right;
+                    width: 50%;
+                    height: auto;
+                    margin: 0 0 10px 25px;
+                    border-radius: 10px;
+                }
+
+                h1 {
+                    color: #c43733;
+                    text-transform: uppercase;
+                    font-size: 20px;
+                }
+
+                p {
+                    font-size: 12px;
+                }
+            }
+
+            aside.left-side {
+                border-right: 1px solid #505A2F;
+                padding-right: 15px;
+                nav {
+                    a {
+                        display: block;
+                        text-transform: uppercase;
+                        font-size: 11px;
+                        color: #505A2F;
+                        border-bottom: 2px solid #505A2F;
+                        border-right: none;
+                        text-decoration: none;
+                        padding: 10px 0;
+
+                        &:hover {
+                            background-color: #505A2F;
+                            color: white;
+                        }
+                        a.active {
+                            background-color: #505A2F;
+                            color: white;
+                        }
+                    }
+                }
+                .login {
+                    padding: 200px 0 0 0;
+
+                    img {
+                        display: block;
+                        width: 90%;
+                        height: 90%;
+
+                        &:hover {
+                            background-color: #C8CAAFFF;
+                        }
+                    }
+                }
+            }
+        }
+
+        footer {
+            background-color: #676E3D;
+            text-align: center;
+            color: white;
+            font-size: 10px;
+            padding: 10px 0;
+        }
+
+        @media screen and (min-width: 601px) {
+
+            section.middle {
+                > nav {
+                    text-align: right;
+                }
+
+                .drop-down-menu {
+                    display: none;
+                }
+            }
+
+            div.white-box {
+                padding: 20px 30px;
+
+                aside.left-side {
+                    display: block;
+                    float: left;
+                    width: 30%;
+                }
+
+                main {
+                    float: right;
+                    width: 60%;
+                }
+            }
+        }
+    }
+}

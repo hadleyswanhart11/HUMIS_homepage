@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>HUMIS Project</title>
     <link rel="stylesheet" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
 
@@ -25,47 +26,61 @@
             </a>
         </nav>
 
+        <nav class="drop-down-menu">
+            <label>
+                <select> name="forms" id="forms">
+                    <option>About Us</option>
+                    <option>Faculty &amp; Staff </option>
+                    <option>Undergraduate Students</option>
+                    <option>Graduate Students</option>
+                </select>
+            </label>
+        </nav>
+
         <div class="green-box">
-            <aside class="left">
+            <aside class="left-side">
                 <nav>
-                    <a href="#">About Us</a>
-                    <a href="#">Faculty &amp; Staff</a>
-                    <a href="#">Undergraduate Students</a>
+                    <a href="about-us.html">About Us</a>
+                    <a href="faculty-and-staff.html">Faculty & Staff</a>
+                    <a href="undergraduate-students.html">Undergraduate Students</a>
                     <a href="#">Graduate Students</a>
-                    <a href="#">Courses &amp; Syllabi</a>
-                    <a href="#">News &amp; Announcements</a>
-                    <a href="#">Friends &amp; Alumni</a>
+                    <a href="courses-and-syllabi.html">Courses & Syllabi</a>
+                    <a href="index.html" class="active">News & Announcements</a>
+                    <a href="friends-and-alumni.html">Friends & Alumni</a>
                     <a href="#">Contact Us</a>
-                    <div class="links">
-
-                    </div>
-
-                    <div class="links">
-                        <a href="#">
-                            <img src="files/login-humis.gif" alt="HUMIS Logo"/>
-                        </a>
-                        <a href="#">
-                        <img src="files/login-cis.gif" alt="HUMIS Logo"/>
-                    </a>
-                    </div>
                 </nav>
-            </aside>
-            <aside class="right">
-                <img src="files/women_w_pottery.jpg" alt="Women with Pottery">
 
-                <h1>News &amp; Announcements</h1>
+                <div class="login">
+                    <img src="files/login-humis.gif" height="36" width="153"/>
+                    <img src="files/login-cis.gif" height="30" width="143"/>
+                </div>
 
-                <p>The History of Women & Gender in Mexico: Met wismodo lestrud mod ent lum dit
-                    nim iure erostis nos nulpute ming ea conse molore dipis nullutem numsan velis nisi blaor
-                    sequis nulputem quat ilit wismolortis ad dunt lutat eliquisl utat vulla conulla faccum vel
-                    inibh erci tie conulla feummod dolor aut accumsan vel esequisi bla adio odolorting erosto
-                    cor iriustie commod minciliquate tatum vero odipit, vulla feuisis molore tat, sim dit alis. </p>
-                <p class="link">
-                <a> More News &amp; Announcements </a>
-                </p>
             </aside>
 
-            <div style="clear: both;"></div>
+            <main>
+                <img src="files/women_w_pottery.jpg" alt="Women W Pottery">
+
+                <div class="news">
+                    <h2>NEWS &amp; ANNOUNCEMENTS</h2>
+
+                    <div class="news-content">
+                        <p>
+                            <strong>The History of Women &amp; Gender in Mexico:</strong>
+                            Met wismodo lestrud mod ent lum dit nim iure erostis nos
+                            nulpute ming ea conse molore adipis nullutem numsan velis
+                            nisi blaor sequis nulputem quat ilit wismolortis ad dunt
+                            lutat eliquisl utat vulla conulla faccum vel inibh erci tie
+                            conulla feummod dolor aut accumsan vel esequisi bla adio
+                            odolorting erosto cor iriustie commod minciliquate tatum
+                            vero odipit, vulla feuisis molore tat, sim dit alis
+                        </p>
+
+                        <a href="#"> > > MORE NEWS &amp; ANNOUNCEMENTS</a>
+                    </div>
+                </div>
+            </main>
+
+
         </div>
 
         <nav class="bottom">
